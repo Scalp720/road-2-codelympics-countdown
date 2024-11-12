@@ -36,7 +36,7 @@ const timerInterval = setInterval(function () {
 
 // Background Music Playlist Code
 const playlist = [
-    'Start Up.mp3',  // Replace with your actual audio file paths
+    'Running.mp3',  // Replace with your actual audio file paths
     'Running.mp3',
     'Future.mp3'
 ];
