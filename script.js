@@ -1,6 +1,6 @@
 // Countdown Timer Code (as per previous setup)
-const startDate = new Date("11-14-2024 12:00:00").getTime();
-const endDate = new Date("11-15-2024 12:00:00").getTime();
+const startDate = new Date("11-13-2024 12:00:00").getTime();
+const endDate = new Date("11-14-2024 12:00:00").getTime();
 const timerInterval = setInterval(function () {
     const now = new Date().getTime();
 
