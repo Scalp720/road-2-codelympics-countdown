@@ -1,0 +1,31 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align items at the bottom */
+    height: 100vh;
+    background-color: #0d1b2a;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background: url('Backdrop.png'); /* Ensure the path to your image is correct */
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 20px; /* Optional: Adds a little padding at the bottom */
+}
+/* Countdown timer styling */
+.timer {
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #ffffff; /* Default color is white */
+}
+.blink-red {
+    color: #ff0000; /* Blinking color: red */
+}
