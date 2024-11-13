@@ -34,7 +34,7 @@ const timerInterval = setInterval(() => {
         if (hours > 0) displayTime += `${String(hours).padStart(2, '0')}h `;
         if (minutes > 0 || hours > 0) displayTime += `${String(minutes).padStart(2, '0')}m `;
         displayTime += `${String(seconds).padStart(2, '0')}s`;
-        document.getElementById("timer").innerText = `Time left in event: ${displayTime}`;
+        document.getElementById("timer").innerText = `${displayTime}`;
     } 
     // If the current time is past the end date
     else {
