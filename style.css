@@ -1,31 +1,82 @@
-/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; /* Align items at the bottom */
+
+.container {
     height: 100vh;
-    background-color: #0d1b2a;
     font-family: Arial, sans-serif;
-    color: #ffffff;
-    background: url('Backdrop.png'); /* Ensure the path to your image is correct */
+    background: url('Background.png'); /* Ensure the path to your image is correct */
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 20px; /* Optional: Adds a little padding at the bottom */
+    color: #fff; /* White text color for visibility */
+    text-align: center; /* Center align text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
-/* Countdown timer styling */
+
+.header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex; /* Arrange images in a row */
+    align-items: center; /* Center align vertically */
+    padding: 20px;
+    gap: 20px; /* Space between images */
+}
+
+.header img {
+    width: 80px;
+    height: 80px;
+}
+
+.main img {
+    width: 100%;
+    max-width: 600px; /* Maximum size for larger screens */
+    height: auto;
+    margin-top: -5rem;
+}
+
 .timer {
+    margin-top: -10rem;
     font-size: 3em;
-    font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
-    letter-spacing: 5px;
-    text-align: center;
-    color: #ffffff; /* Default color is white */
+    font-weight: bold;
+    color: #fff; /* White text for timer */
 }
-.blink-red {
-    color: #ff0000; /* Blinking color: red */
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+    .header img {
+        width: 60px;
+        height: 60px;
+    }
+    .main img {
+        max-width: 400px;
+        margin-top: -3rem;
+    }
+    .timer {
+        font-size: 1.5em;
+        margin-top: -3rem;
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .header img {
+        width: 50px;
+        height: 50px;
+    }
+    .main img {
+        max-width: 300px;
+        margin-top: -2rem;
+    }
+    .timer {
+        font-size: 1.2em;
+        margin-top: -2rem;
+    }
 }

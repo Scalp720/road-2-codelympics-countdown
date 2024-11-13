@@ -7,15 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Countdown Timer at the bottom -->
-    <div id="timer" class="timer">
-        <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
-    </div>
+   <div class="container">
+      <div class="header">
+        <div class="img1">
+            <img src="isatechLogo.png" alt="ISATech Logo">
+        </div>
+        <div class="img2">
+            <img src="Codelympcs.png" alt="CodeLympics Logo">
+        </div>
+      </div>
+      <div class="main">
+        <img src="/Logo.png" alt="Main Logo">
+        <!-- Timer section below the main logo image -->
+        <div class="timer" id="timer">
+            Event starts in: 00h 00m 00s
+        </div>
+        <!-- Audio element for background music -->
+        <audio id="background-music" autoplay loop></audio>
+      </div>
+   </div>
 
-    <!-- Background Music with Playlist Support -->
-    <audio id="background-music" loop autoplay></audio> <!-- JavaScript will set the playlist here -->
-
-    <!-- JavaScript for Countdown Timer and Playlist Control -->
-    <script src="script.js"></script>
+   <!-- Link to the external JavaScript file -->
+   <script src="script.js"></script>
 </body>
 </html>
