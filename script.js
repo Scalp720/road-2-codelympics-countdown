@@ -1,5 +1,5 @@
 // Set the start and end dates for the countdown
-const startDate = new Date("2024-11-14T12:00:00").getTime(); // Start date: November 14, 2024, 12:00 PM
+const startDate = new Date("2024-11-15T10:40:00").getTime(); // Start date: November 14, 2024, 12:00 PM
 const endDate = new Date("2024-11-15T12:00:00").getTime();   // End date: November 15, 2024, 12:00 PM
 
 // Update the countdown every 1 second
