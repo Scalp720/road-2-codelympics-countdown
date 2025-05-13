@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -10,8 +11,8 @@
     background: url('Background.png'); /* Ensure the path to your image is correct */
     background-repeat: no-repeat;
     background-size: cover;
-    color: #fff; /* White text color for visibility */
-    text-align: center; /* Center align text */
+    color: #fff;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,10 +24,10 @@
     position: absolute;
     top: 0;
     right: 0;
-    display: flex; /* Arrange images in a row */
-    align-items: center; /* Center align vertically */
+    display: flex;
+    align-items: center;
     padding: 20px;
-    gap: 20px; /* Space between images */
+    gap: 20px;
 }
 
 .header img {
@@ -36,17 +37,56 @@
 
 .main img {
     width: 100%;
-    max-width: 600px; /* Maximum size for larger screens */
+    max-width: 600px;
     height: auto;
     margin-top: -5rem;
 }
 
+.circular-timer {
+    position: relative;
+    width: 300px;  /* Increased from 200px */
+    height: 300px; /* Increased from 200px */
+    margin: 20px auto;
+}
+
+.circular-timer svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+}
+
+.circular-timer circle {
+    fill: none;
+    stroke-width: 20; /* Increased from 15 */
+}
+
+.bg-circle {
+    stroke: #ccc;
+}
+
+.progress-circle {
+    stroke: #FB9902;
+    stroke-dasharray: 848.23; /* Updated for larger circle: 2 * Math.PI * 135 */
+    stroke-dashoffset: 848.23;
+    transition: stroke-dashoffset 1s linear;
+}
+
+.timer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em; /* Increased from 2em */
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+
 .timer {
     margin-top: -10rem;
-    font-size: 3em;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    color: #fff; /* White text for timer */
 }
 
 /* Media query for tablets */
@@ -59,9 +99,24 @@
         max-width: 400px;
         margin-top: -3rem;
     }
-    .timer {
-        font-size: 1.5em;
-        margin-top: -3rem;
+    .circular-timer {
+        width: 250px; /* Adjusted for tablets */
+        height: 250px;
+    }
+    .circular-timer circle {
+        stroke-width: 16; /* Slightly thinner for smaller circle */
+    }
+    .timer-text {
+        font-size: 2.5em; /* Adjusted for tablets */
+    }
+    .progress-circle, .bg-circle {
+        cx: 125;
+        cy: 125;
+        r: 112;
+    }
+    .progress-circle {
+        stroke-dasharray: 703.72; /* 2 * Math.PI * 112 */
+        stroke-dashoffset: 703.72;
     }
 }
 
@@ -75,8 +130,23 @@
         max-width: 300px;
         margin-top: -2rem;
     }
-    .timer {
-        font-size: 1.2em;
-        margin-top: -2rem;
+    .circular-timer {
+        width: 200px; /* Adjusted for mobile */
+        height: 200px;
+    }
+    .circular-timer circle {
+        stroke-width: 14; /* Even thinner for mobile */
+    }
+    .timer-text {
+        font-size: 2em; /* Adjusted for mobile */
+    }
+    .progress-circle, .bg-circle {
+        cx: 100;
+        cy: 100;
+        r: 90;
+    }
+    .progress-circle {
+        stroke-dasharray: 565.48; /* 2 * Math.PI * 90 */
+        stroke-dashoffset: 565.48;
     }
 }

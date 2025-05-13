@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Road 2 CodeLympics Countdown</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   <div class="container">
-      <div class="header">
-        <div class="img1">
-            <img src="isatechLogo.png" alt="ISATech Logo">
-        </div>
-        <div class="img2">
-            <img src="Codelympcs.png" alt="CodeLympics Logo">
-        </div>
-      </div>
-      <div class="main">
-        <img src="Logo.png" alt="Main Logo">
-        <!-- Timer section below the main logo image -->
-        <div class="timer" id="timer">
-            Event starts in: 00h 00m 00s
-        </div>
-        <!-- Audio element for background music -->
-        <audio id="background-music" autoplay loop></audio>
-      </div>
-   </div>
 
-   <!-- Link to the external JavaScript file -->
-   <script src="script.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Road 2 CodeLympics Countdown</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="img1">
+        <img src="isatechLogo.png" alt="ISATech Logo">
+      </div>
+      <div class="img2">
+        <img src="Codelympcs.png" alt="CodeLympics Logo">
+      </div>
+    </div>
+    <div class="main">
+      <img src="Logo.png" alt="Main Logo">
+      <!-- Circular Timer -->
+      <div class="circular-timer">
+        <svg>
+          <circle class="bg-circle" cx="150" cy="150" r="135"></circle>
+          <circle class="progress-circle" cx="150" cy="150" r="135"></circle>
+        </svg>
+        <div class="timer-text" id="timer">00:00:00</div>
+      </div>
+      <!-- Audio element for background music -->
+      <audio id="background-music" autoplay loop>
+        <source src="countdown.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+
+  <!-- JavaScript for Timer -->
+  <script src="script.js"></script>
 </body>
+
 </html>
